@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name          = "SwiftUIX"
-  spec.version       = "0.1.7"
+  spec.version       = "0.1.6"
   spec.summary       = "SwiftUIX library in iOS"
   spec.homepage      = "https://github.com/SwiftUIX/SwiftUIX"
   spec.license       = { :type => "MIT", :file => "LICENSE.md" }
