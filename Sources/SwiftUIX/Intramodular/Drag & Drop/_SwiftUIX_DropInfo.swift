@@ -2,7 +2,7 @@
 // Copyright (c) Vatsal Manot
 //
 
-import _SwiftUIX
+
 import SwiftUI
 import UniformTypeIdentifiers
 

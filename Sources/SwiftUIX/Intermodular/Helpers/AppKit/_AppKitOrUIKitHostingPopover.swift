@@ -4,7 +4,7 @@
 
 #if os(iOS) || os(macOS) || os(tvOS) || os(visionOS)
 
-@_spi(Internal) import _SwiftUIX
+
 #if os(macOS)
 import AppKit
 #endif
