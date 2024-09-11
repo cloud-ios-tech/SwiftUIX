@@ -9,7 +9,7 @@ import SwiftUI
 
 @available(macOS 11.0, iOS 14.0, watchOS 7.0, tvOS 14.0, *)
 extension NSDraggingInfo {
-    package var itemProviders: [NSItemProvider] {
+    var itemProviders: [NSItemProvider] {
         guard let pasteboardItems = self.draggingPasteboard.pasteboardItems else {
             return []
         }
@@ -46,7 +46,7 @@ extension NSDraggingInfo {
         return items
     }
     
-    package var _alt_fileURLs: [URL] {
+    var _alt_fileURLs: [URL] {
         let filenames: [String] = self.draggingPasteboard.propertyList(forType: NSPasteboard.PasteboardType._filenames) as? [String] ?? []
         
         return filenames.map {
@@ -56,7 +56,7 @@ extension NSDraggingInfo {
 }
 
 extension NSPasteboard.PasteboardType {
-    package static var _filenames = NSPasteboard.PasteboardType(rawValue: "NSFilenamesPboardType")
+    static var _filenames = NSPasteboard.PasteboardType(rawValue: "NSFilenamesPboardType")
 }
 
 #endif

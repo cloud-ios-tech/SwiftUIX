@@ -22,7 +22,7 @@ extension _HashIdentifiable {
 
 extension Hashable {
     @inlinable
-    package var hashIdentifiable: _HashIdentifiableValue<Self> {
+    var hashIdentifiable: _HashIdentifiableValue<Self> {
         _HashIdentifiableValue(self)
     }
 }

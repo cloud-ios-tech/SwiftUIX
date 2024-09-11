@@ -26,7 +26,7 @@ public struct _SwiftUIX_DropInfo: _SwiftUI_DropInfoProtocol {
     
     fileprivate let draggingInfo: NSDraggingInfo
     
-    package init(draggingInfo: NSDraggingInfo, in view: NSView) {
+    init(draggingInfo: NSDraggingInfo, in view: NSView) {
         self.draggingInfo = draggingInfo
         self.location = draggingInfo.draggingLocation
     }

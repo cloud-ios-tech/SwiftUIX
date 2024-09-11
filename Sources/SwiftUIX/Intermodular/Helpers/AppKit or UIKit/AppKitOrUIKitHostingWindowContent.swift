@@ -68,7 +68,7 @@ public struct _AppKitOrUIKitHostingWindowContent<Content: View>: View {
         )
     }
     
-    package var initialized: Bool = true
+    var initialized: Bool = true
     
     init(
         window: AppKitOrUIKitHostingWindow<Content>?,

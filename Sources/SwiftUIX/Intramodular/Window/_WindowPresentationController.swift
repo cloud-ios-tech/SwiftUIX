@@ -56,8 +56,8 @@ public final class _WindowPresentationController<Content: View>: _AnyWindowPrese
     weak var _sourceAppKitOrUIKitWindow: AppKitOrUIKitWindow?
     
     @Published
-    package var _isVisible: Bool = false
-    package var _externalIsVisibleBinding: Binding<Bool>?
+    var _isVisible: Bool = false
+    var _externalIsVisibleBinding: Binding<Bool>?
     
     private var _updateWorkItem: DispatchWorkItem?
 
@@ -316,7 +316,7 @@ extension _WindowPresentationController {
         return contentWindow
     }
     
-    package func _showWasCalledOnWindow() {
+    func _showWasCalledOnWindow() {
         if let isVisibleBinding = self._externalIsVisibleBinding {
             if !isVisibleBinding.wrappedValue {
                 isVisibleBinding.wrappedValue = true
@@ -326,7 +326,7 @@ extension _WindowPresentationController {
         self._isVisible = true
     }
     
-    package func _windowDidJustClose() {
+    func _windowDidJustClose() {
         if let isVisibleBinding = self._externalIsVisibleBinding {
             if !isVisibleBinding.wrappedValue {
                 isVisibleBinding.wrappedValue = false

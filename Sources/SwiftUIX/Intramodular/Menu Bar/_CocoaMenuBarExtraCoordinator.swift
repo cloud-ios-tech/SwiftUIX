@@ -25,8 +25,8 @@ public class _CocoaMenuBarExtraCoordinator<ID: Hashable, Label: View, Content: V
     public var item: MenuBarItem<ID, Label, Content>
     public var action: (@MainActor () -> Void)?
     
-    package private(set) var makePopover: (() -> _AppKitMenuBarExtraPopover<ID, Label, Content>)?
-    package private(set) var popover: _AppKitMenuBarExtraPopover<ID, Label, Content>? = nil
+    private(set) var makePopover: (() -> _AppKitMenuBarExtraPopover<ID, Label, Content>)?
+    private(set) var popover: _AppKitMenuBarExtraPopover<ID, Label, Content>? = nil
     
     public var wantsPopover: Bool {
         guard Content.self != EmptyView.self else {

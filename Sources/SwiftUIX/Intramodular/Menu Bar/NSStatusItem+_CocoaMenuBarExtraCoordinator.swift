@@ -22,7 +22,7 @@ extension NSStatusItem {
         }
     }
     
-    package func update<ID, Label, Content>(
+    func update<ID, Label, Content>(
         from item: MenuBarItem<ID, Label, Content>,
         coordinator: _CocoaMenuBarExtraCoordinator<ID, Label, Content>
     ) {

@@ -14,7 +14,7 @@ public struct PersistentObject<Value>: DynamicProperty {
     @State private var objectContainer: _AnyObservableObjectMutableBox<Value>
     @State private var foo: Bool = false
 
-    @ObservedObject package var observedObjectContainer: _AnyObservableObjectMutableBox<Value>
+    @ObservedObject var observedObjectContainer: _AnyObservableObjectMutableBox<Value>
     
     public var wrappedValue: Value {
         get {
